@@ -7,6 +7,7 @@ export default function Home() {
       <Head>
         <title>Pizza Shop in Boston</title>
         <meta name="description" content="Best Pizza In Town" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
     </div>
   );
