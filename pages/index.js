@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Pizza Shop in Boston</title>
+        <meta name="description" content="Best Pizza In Town" />
       </Head>
     </div>
   );

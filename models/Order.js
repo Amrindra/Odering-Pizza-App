@@ -1,41 +1,37 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const OrderSchema = new mongoose.Schema(
   {
-    title: {
+    customer: {
       type: String,
       required: true,
       maxlength: 60,
     },
 
-    desc: {
+    address: {
       type: String,
       required: true,
       maxlength: 200,
     },
 
-    img: {
-      type: String,
+    total: {
+      type: Number,
       required: true,
     },
 
-    prices: {
-      //type is an array of numbers
-      type: [Number],
-      required: true,
+    status: {
+      type: Number,
+      default: 0,
     },
 
-    extraOptions: {
-      type: [
-        {
-          text: { type: String, required: true },
-          price: { type: Number, required: true },
-        },
-      ],
+    method: {
+      type: Number,
+      required: true,
     },
   },
+
   { timestamps: true }
 );
 
 //mongoose.models.Order meaning that if the Order model doesn't exit yet then create one if it does don't create model
-export default mongoose.models.Order || mongoose.model("Order", ProductSchema);
+export default mongoose.models.Order || mongoose.model('Order', OrderSchema);
