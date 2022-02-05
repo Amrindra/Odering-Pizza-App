@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import styles from '../styles/Slider.module.css';
+import Image from "next/image";
+import styles from "../styles/Slider.module.css";
 
 const Slider = () => {
   return (
@@ -8,35 +8,45 @@ const Slider = () => {
         <Image
           src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/100/000000/external-left-arrow-arrows-dreamstale-lineal-dreamstale-12.png"
           alt=""
-          layout="fill"
+          // layout="fill"
+          width="60px"
+          height="60px"
         />
       </div>
 
-      <div className={styles.wrapper}>
+      <div className={styles.imagesWrapper}>
         <div className={styles.imgContainer}>
           <Image
-            src="https://img.icons8.com/external-konkapp-flat-konkapp/100/000000/external-pizza-seafood-konkapp-flat-konkapp.png"
+            src="https://purepng.com/public/uploads/large/purepng.com-pizzafood-pizza-941524625790xzrxh.png"
             alt=""
-            // layout="fill"
-            width="100px"
+            layout="fill"
+            objectFit="contain"
+
+            // width="600px"
+            // height="600px"
           />
         </div>
 
         <div className={styles.imgContainer}>
           <Image
-            src="https://img.icons8.com/external-konkapp-flat-konkapp/100/000000/external-pizza-seafood-konkapp-flat-konkapp.png"
+            src="https://purepng.com/public/uploads/large/purepng.com-pizzafood-pizza-941524625790xzrxh.png"
             alt=""
-            // layout="fill"
-            width="100px"
+            layout="fill"
+            objectFit="contain"
+            // width="200px"
+            // height="200px"
           />
         </div>
 
         <div className={styles.imgContainer}>
           <Image
-            src="https://img.icons8.com/external-konkapp-flat-konkapp/100/000000/external-pizza-seafood-konkapp-flat-konkapp.png"
+            src="https://purepng.com/public/uploads/large/purepng.com-pizzafood-pizza-941524625790xzrxh.png"
             alt=""
-            // layout="fill"
-            width="100px"
+            layout="fill"
+            objectFit="contain"
+
+            // width="200px"
+            // height="200px"
           />
         </div>
       </div>
@@ -45,7 +55,9 @@ const Slider = () => {
         <Image
           src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/100/000000/external-right-arrow-arrows-dreamstale-lineal-dreamstale-13.png"
           alt=""
-          layout="fill"
+          // layout="fill"
+          width="60px"
+          height="60px"
         />
       </div>
     </div>
