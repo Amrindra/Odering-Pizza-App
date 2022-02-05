@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Slider from '../components/Slider';
+
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -9,6 +11,8 @@ export default function Home() {
         <meta name="description" content="Best Pizza In Town" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Slider />
     </div>
   );
 }
