@@ -1,10 +1,18 @@
 import Image from "next/image";
+import { useState } from "react";
 import styles from "../styles/Slider.module.css";
 
 const Slider = () => {
+  const [index, setIndex] = useState(0);
+
+  const handleArrow = () => {};
   return (
     <div className={styles.container}>
-      <div className={styles.arrowContainer} style={{ left: 0 }}>
+      <div
+        className={styles.arrowContainer}
+        style={{ left: 0 }}
+        onClick={() => handleArrow("leftButton")}
+      >
         <Image
           src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/100/000000/external-left-arrow-arrows-dreamstale-lineal-dreamstale-12.png"
           alt=""
@@ -44,14 +52,17 @@ const Slider = () => {
             alt=""
             layout="fill"
             objectFit="contain"
-
             // width="200px"
             // height="200px"
           />
         </div>
       </div>
 
-      <div className={styles.arrowContainer} style={{ right: 0 }}>
+      <div
+        className={styles.arrowContainer}
+        style={{ right: 0 }}
+        onClick={() => handleArrow("rightButton")}
+      >
         <Image
           src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/100/000000/external-right-arrow-arrows-dreamstale-lineal-dreamstale-13.png"
           alt=""

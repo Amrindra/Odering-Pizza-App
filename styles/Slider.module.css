@@ -6,12 +6,13 @@
 
 .arrowContainer {
   position: absolute;
-  /* width: 5%; */
+  /* width: 25%; */
   height: 20%;
   top: 0;
   bottom: 0;
   margin: auto;
   cursor: pointer;
+  z-index: 2;
 }
 
 .imagesWrapper {
