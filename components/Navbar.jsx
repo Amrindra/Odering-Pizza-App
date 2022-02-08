@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import styles from '../styles/Navbar.module.css';
+import Image from "next/image";
+import styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
   return (
@@ -45,7 +45,7 @@ const Navbar = () => {
             width="32"
             height="32"
           />
-          <div className={styles.counter}>2</div>
+          <div className={styles.qtyCounter}>2</div>
         </div>
       </div>
     </div>

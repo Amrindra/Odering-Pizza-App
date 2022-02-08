@@ -5,7 +5,19 @@ import styles from "../styles/Slider.module.css";
 const Slider = () => {
   const [index, setIndex] = useState(0);
 
-  const handleArrow = () => {};
+  const handleArrow = (direction) => {
+    if (direction === "leftButton") {
+      // if the index isn't 0 image slide to the left after clicking on left button
+      setIndex(index !== 0 ? index - 1 : 2);
+    }
+
+    if (direction === "rightButton") {
+      setIndex(index !== 2 ? index + 1 : 0);
+    }
+  };
+
+  console.log(index);
+
   return (
     <div className={styles.container}>
       <div
@@ -19,16 +31,21 @@ const Slider = () => {
           // layout="fill"
           width="60px"
           height="60px"
+          objectFit="contain"
         />
       </div>
 
-      <div className={styles.imagesWrapper}>
+      <div
+        className={styles.imagesWrapper}
+        style={{ transform: `translateX(${-100 * index}vw)` }}
+      >
         <div className={styles.imgContainer}>
           <Image
-            src="https://purepng.com/public/uploads/large/purepng.com-pizzafood-pizza-941524625790xzrxh.png"
+            src="/img/Pizza1.png"
             alt=""
             layout="fill"
             objectFit="contain"
+            priority
 
             // width="600px"
             // height="600px"
@@ -37,10 +54,11 @@ const Slider = () => {
 
         <div className={styles.imgContainer}>
           <Image
-            src="https://purepng.com/public/uploads/large/purepng.com-pizzafood-pizza-941524625790xzrxh.png"
+            src="/img/Pizza2.png"
             alt=""
             layout="fill"
             objectFit="contain"
+            priority
             // width="200px"
             // height="200px"
           />
@@ -48,7 +66,7 @@ const Slider = () => {
 
         <div className={styles.imgContainer}>
           <Image
-            src="https://purepng.com/public/uploads/large/purepng.com-pizzafood-pizza-941524625790xzrxh.png"
+            src="/img/Pizza3.jpg"
             alt=""
             layout="fill"
             objectFit="contain"
