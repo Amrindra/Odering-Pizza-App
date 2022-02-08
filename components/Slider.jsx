@@ -16,7 +16,7 @@ const Slider = () => {
     }
   };
 
-  console.log(index);
+  // console.log(index);
 
   return (
     <div className={styles.container}>
@@ -26,7 +26,7 @@ const Slider = () => {
         onClick={() => handleArrow("leftButton")}
       >
         <Image
-          src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/100/000000/external-left-arrow-arrows-dreamstale-lineal-dreamstale-12.png"
+          src="https://img.icons8.com/ios-glyphs/100/000000/chevron-left.png"
           alt=""
           // layout="fill"
           width="60px"
@@ -66,7 +66,7 @@ const Slider = () => {
 
         <div className={styles.imgContainer}>
           <Image
-            src="/img/Pizza3.jpg"
+            src="/img/pizza.png"
             alt=""
             layout="fill"
             objectFit="contain"
@@ -82,7 +82,7 @@ const Slider = () => {
         onClick={() => handleArrow("rightButton")}
       >
         <Image
-          src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/100/000000/external-right-arrow-arrows-dreamstale-lineal-dreamstale-13.png"
+          src="https://img.icons8.com/ios-glyphs/100/000000/chevron-right.png"
           alt=""
           // layout="fill"
           width="60px"
