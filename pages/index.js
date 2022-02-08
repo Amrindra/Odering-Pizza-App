@@ -1,7 +1,8 @@
-import Head from 'next/head';
-import Slider from '../components/Slider';
+import Head from "next/head";
+import Slider from "../components/Slider";
 
-import styles from '../styles/Home.module.css';
+import styles from "../styles/Home.module.css";
+import PizzaList from "../components/PizzaList";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
 
       <Slider />
+      <PizzaList />
     </div>
   );
 }
