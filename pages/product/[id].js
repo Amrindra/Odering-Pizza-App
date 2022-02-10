@@ -9,7 +9,7 @@ const Product = () => {
     id: 1,
     img: "/img/pizza.png",
     name: "CAMPAGNOLA",
-    price: [19.9, 23.9, 27.9],
+    price: [19.99, 23.99, 27.99],
     desc:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu purus, rhoncus fringilla vestibulum vel, dignissim vel ante. Nulla facilisi. Nullam a urna sit amet tellus pellentesque egestas in in ante."
   };
@@ -88,6 +88,11 @@ const Product = () => {
             />
             <label htmlFor="double">Spicy</label>
           </div>
+        </div>
+
+        <div className={styles.add}>
+          <input type="number" defaultValue={1} className={styles.quantity} />
+          <button className={styles.button}>Add to cart</button>
         </div>
       </div>
     </div>
