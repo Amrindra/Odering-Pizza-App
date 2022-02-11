@@ -118,4 +118,28 @@
     content: "Total: ";
     font-weight: 500;
   }
+
+  .row:last-child {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .doen,
+  .undone,
+  .inProgress {
+    margin-bottom: 20px;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .container {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
 }
