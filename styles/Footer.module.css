@@ -34,6 +34,17 @@
   color: rgb(211, 211, 211);
 }
 
+@media screen and (max-width: 1200px) {
+  .container {
+    height: 52vh;
+    text-align: center;
+  }
+
+  .item:first-child {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .container {
     height: auto;
@@ -56,14 +67,3 @@
     font-size: 20px;
   }
 }
-
-/* @media screen and (max-width: 880px) {
-  .container {
-    height: 52vh;
-    text-align: center;
-  }
-
-  .item:first-child {
-    display: none;
-  }
-} */

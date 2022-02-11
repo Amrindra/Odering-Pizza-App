@@ -95,6 +95,47 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 70vh;
+  }
+
+  .imageContainer {
+    height: 40vw;
+    width: 40vw;
+  }
+
+  .right {
+    margin-top: 10px;
+  }
+
+  .sizesWrapper {
+    width: 90%;
+    padding: 0 30px;
+  }
+
+  .ingredientsWrapper {
+    flex-direction: column;
+  }
+
+  .option {
+    margin: 0 15px;
+    font-size: 18px;
+  }
+
+  .checkbox {
+    width: 25px;
+    height: 25px;
+  }
+
+  .quantity,
+  .button {
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .container {
     height: auto;
@@ -139,47 +180,5 @@
   .button {
     height: 50px;
     padding: 10px 20px;
-  }
-}
-
-@media screen and (max-width: 1218px) {
-  .container {
-    height: 60vh;
-  }
-
-  .imageContainer {
-    height: 40vw;
-    width: 40vw;
-    margin-bottom: 10rem;
-  }
-
-  .right {
-    margin-top: 10px;
-  }
-
-  .sizesWrapper {
-    width: 90%;
-    padding: 0 30px;
-  }
-
-  .ingredientsWrapper {
-    flex-direction: column;
-  }
-
-  .option {
-    margin: 0 15px;
-    font-size: 18px;
-  }
-
-  .checkbox {
-    width: 25px;
-    height: 25px;
-  }
-
-  .quantity,
-  .button {
-    height: 40px;
-    padding: 10px 20px;
-    font-size: 1.1rem;
   }
 }
