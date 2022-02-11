@@ -71,7 +71,7 @@
   display: flex;
   align-items: center;
   margin-right: 10px;
-  font-style: 14px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -93,4 +93,51 @@
   border: none;
   font-weight: 500;
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .imageContainer {
+    height: 70vw;
+    width: 70vw;
+  }
+
+  /* .title {
+    margin: 5px;
+  } */
+  .desc {
+    padding: 0 15px;
+    font-size: 20px;
+  }
+  .sizesWrapper {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .ingredientsWrapper {
+    flex-direction: column;
+  }
+
+  .option {
+    margin: 10px;
+    font-size: 18px;
+  }
+
+  .checkbox {
+    width: 25px;
+    height: 25px;
+  }
+
+  .quantity,
+  .button {
+    height: 50px;
+    padding: 10px 20px;
+  }
 }
