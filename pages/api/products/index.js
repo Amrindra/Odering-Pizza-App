@@ -1,7 +1,9 @@
 import Product from "../../../models/Product";
 import dbConnect from "../../../util/mongoose";
 
+//we use async function because it's the CRUD operation and we don't know how long will it take for processing
 export default async function handler(req, res) {
+  //extrac {method} and this method may conatain Post, Get, PUt, Delete from request
   const { method } = req;
 
   dbConnect();
@@ -10,7 +12,7 @@ export default async function handler(req, res) {
   }
   if (method === "POST") {
     try {
-      // creating new product in the mongodb
+      // Product.create(req.body) is creating new product in the mongodb
       const product = await Product.create(req.body);
       res.status(201).json(product);
     } catch (error) {
