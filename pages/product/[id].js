@@ -6,6 +6,7 @@ import styles from "../../styles/Product.module.css";
 const Product = ({ pizza }) => {
   const [price, setPrice] = useState(pizza.prices[0]);
   const [size, setSize] = useState(0);
+  const [extraOption, setExtraOption] = useState([]);
 
   //this functiong will change the price whenver users choose the size of the pizza or adding exatra option
   const changePrice = (number) => {
@@ -20,12 +21,16 @@ const Product = ({ pizza }) => {
     changePrice(difference);
   };
 
-  const handleChange = (e, option) => {
-    const checked = e.target.checked;
+  const handleChange = (event, eachOption) => {
+    const checked = event.target.checked;
 
     if (checked) {
+      changePrice(eachOption.price);
+    } else {
+      changePrice(-eachOption.price);
     }
   };
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -37,7 +42,7 @@ const Product = ({ pizza }) => {
       <div className={styles.right}>
         <h1 className={styles.title}>{pizza.name}</h1>
         {/* pizza.price[size] meaning that showing price accroding to the size from the price array  */}
-        <span className={styles.price}>${pizza.prices[size]}</span>
+        <span className={styles.price}>${price}</span>
         <p className={styles.desc}>{pizza.desc}</p>
         <h3 className={styles.choose}>Choose the size</h3>
 
@@ -68,7 +73,7 @@ const Product = ({ pizza }) => {
                 name={eachOption.text}
                 id={eachOption.text}
                 className={styles.checkbox}
-                onChange={(event) => handleChange(e, option)}
+                onChange={(event) => handleChange(event, eachOption)}
               />
               <label htmlFor="double">{eachOption.text}</label>
             </div>
