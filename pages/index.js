@@ -3,8 +3,9 @@ import Slider from "../components/Slider";
 
 import styles from "../styles/Home.module.css";
 import PizzaList from "../components/PizzaList";
+import axios from "axios";
 
-export default function Home() {
+export default function Home({ productList }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +15,19 @@ export default function Home() {
       </Head>
 
       <Slider />
-      <PizzaList />
+      {/* passing productList data from database as a prop to the component  */}
+      <PizzaList productList={productList} />
     </div>
   );
 }
+
+export const getServerSideProps = async () => {
+  const response = await axios.get(
+    "https://tonbb.sse.codesandbox.io/api/products"
+  );
+  return {
+    props: {
+      productList: response.data
+    }
+  };
+};

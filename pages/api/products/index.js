@@ -9,7 +9,15 @@ export default async function handler(req, res) {
   dbConnect();
 
   if (method === "GET") {
+    try {
+      //find all the products in the Product model from database and store in the products variable
+      const products = await Product.find();
+      res.status(200).json(products);
+    } catch (error) {
+      res.status(500).json(error);
+    }
   }
+
   if (method === "POST") {
     try {
       // Product.create(req.body) is creating new product in the mongodb
