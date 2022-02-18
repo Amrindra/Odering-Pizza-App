@@ -2,11 +2,14 @@ import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "../../styles/Product.module.css";
+import { useDispatch } from "react-redux";
 
 const Product = ({ pizza }) => {
   const [price, setPrice] = useState(pizza.prices[0]);
   const [size, setSize] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const [extraOption, setExtraOption] = useState([]);
+  const dispatch = useDispatch();
 
   //this functiong will change the price whenver users choose the size of the pizza or adding exatra option
   const changePrice = (number) => {
@@ -26,10 +29,18 @@ const Product = ({ pizza }) => {
 
     if (checked) {
       changePrice(eachOption.price);
+      //at first we set extraOption to an empty array, but once a user checks on the checkBox it will add that item to the usesate hook
+      setExtraOption((prev) => [...prev, eachOption]);
     } else {
       changePrice(-eachOption.price);
+      //when users unchecks the checkbox it will remove from the usestate hook above
+      setExtraOption(
+        extraOption.filter((extra) => extra._id !== eachOption._id)
+      );
     }
   };
+
+  const handleClick = () => {};
 
   return (
     <div className={styles.container}>
@@ -81,8 +92,15 @@ const Product = ({ pizza }) => {
         </div>
 
         <div className={styles.add}>
-          <input type="number" defaultValue={1} className={styles.quantity} />
-          <button className={styles.button}>Add to cart</button>
+          <input
+            onChange={(e) => setQuantity(e.target.value)}
+            type="number"
+            defaultValue={1}
+            className={styles.quantity}
+          />
+          <button className={styles.button} onClick={handleClick()}>
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
