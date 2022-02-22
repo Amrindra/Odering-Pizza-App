@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import styles from "../../styles/Product.module.css";
 import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/cartSlice";
 
 const Product = ({ pizza }) => {
   const [price, setPrice] = useState(pizza.prices[0]);
@@ -40,7 +41,10 @@ const Product = ({ pizza }) => {
     }
   };
 
-  const handleClick = () => {};
+  //this function is handling the add to cart button
+  const handleClick = () => {
+    dispatch(addProduct({ ...pizza, extraOption, price, quantity }));
+  };
 
   return (
     <div className={styles.container}>
@@ -98,7 +102,7 @@ const Product = ({ pizza }) => {
             defaultValue={1}
             className={styles.quantity}
           />
-          <button className={styles.button} onClick={handleClick()}>
+          <button className={styles.button} onClick={handleClick}>
             Add to cart
           </button>
         </div>

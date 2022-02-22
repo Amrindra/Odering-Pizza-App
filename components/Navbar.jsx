@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
 import { useSelector } from "react-redux";
+import Link from "next/link";
 
 const Navbar = () => {
   //quantity value is coming from the initialState in the cartSlice redux
@@ -26,7 +27,9 @@ const Navbar = () => {
 
       <div className={styles.item}>
         <ul className={styles.nav_list}>
-          <li className={styles.listItem}>Homepage</li>
+          <Link href="/" passHref>
+            <li className={styles.listItem}>Homepage</li>
+          </Link>
           <li className={styles.listItem}>Products</li>
           <li className={styles.listItem}>Menu</li>
           <Image
@@ -41,17 +44,19 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className={styles.item}>
-        <div className={styles.cart}>
-          <Image
-            src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-shopping-cart-e-commerce-kmg-design-flat-kmg-design-2.png"
-            alt=""
-            width="32"
-            height="32"
-          />
-          <div className={styles.qtyCounter}>{quantity}</div>
+      <Link href="/cart" passHref>
+        <div className={styles.item}>
+          <div className={styles.cart}>
+            <Image
+              src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-shopping-cart-e-commerce-kmg-design-flat-kmg-design-2.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            <div className={styles.qtyCounter}>{quantity}</div>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
