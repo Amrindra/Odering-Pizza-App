@@ -129,8 +129,10 @@ const Admin = ({ orders, products }) => {
 };
 
 export const getServerSideProps = async (ctx) => {
+  //there is a request it will take a cookie, but if there is no cookie, just take the empty string
   const myCookie = ctx.req?.cookies || "";
 
+  //if myCookie doesn't match the TOKEN, just block the process here and don't call any API request here and then return to the login page
   if (myCookie.token !== process.env.TOKEN) {
     return {
       redirect: {
