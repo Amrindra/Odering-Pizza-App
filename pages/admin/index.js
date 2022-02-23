@@ -12,7 +12,7 @@ const Admin = ({ orders, products }) => {
     console.log(id);
     try {
       const res = await axios.delete(
-        "http://localhost:3000/api/products/" + id
+        "https://tonbb.sse.codesandbox.io/api/products/" + id
       );
       setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
     } catch (err) {
@@ -21,15 +21,21 @@ const Admin = ({ orders, products }) => {
   };
 
   const handleStatus = async (id) => {
+    //to find the status of the order and choose the first item of this array
     const item = orderList.filter((order) => order._id === id)[0];
     const currentStatus = item.status;
 
     try {
-      const res = await axios.put("http://localhost:3000/api/orders/" + id, {
-        status: currentStatus + 1
-      });
+      const res = await axios.put(
+        "https://tonbb.sse.codesandbox.io/api/orders/" + id,
+        {
+          status: currentStatus + 1
+        }
+      );
       setOrderList([
+        //add the new orders
         res.data,
+        //delete the order from the orderlist
         ...orderList.filter((order) => order._id !== id)
       ]);
     } catch (err) {
@@ -51,6 +57,7 @@ const Admin = ({ orders, products }) => {
               <th>Action</th>
             </tr>
           </tbody>
+
           {pizzaList.map((product) => (
             <tbody key={product._id}>
               <tr className={styles.trTitle}>
@@ -63,9 +70,11 @@ const Admin = ({ orders, products }) => {
                     alt=""
                   />
                 </td>
+
                 <td>{product._id.slice(0, 5)}...</td>
                 <td>{product.title}</td>
                 <td>${product.prices[0]}</td>
+
                 <td>
                   <button className={styles.button}>Edit</button>
                   <button
@@ -80,6 +89,7 @@ const Admin = ({ orders, products }) => {
           ))}
         </table>
       </div>
+
       <div className={styles.item}>
         <h1 className={styles.title}>Orders</h1>
         <table className={styles.table}>
@@ -93,6 +103,7 @@ const Admin = ({ orders, products }) => {
               <th>Action</th>
             </tr>
           </tbody>
+
           {orderList.map((order) => (
             <tbody key={order._id}>
               <tr className={styles.trTitle}>
@@ -100,7 +111,7 @@ const Admin = ({ orders, products }) => {
                 <td>{order.customer}</td>
                 <td>${order.total}</td>
                 <td>
-                  {order.method === 0 ? <span>cash</span> : <span>paid</span>}
+                  {order.method === 0 ? <span>CASH</span> : <span>PAID</span>}
                 </td>
                 <td>{status[order.status]}</td>
                 <td>
@@ -129,8 +140,12 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-  const productRes = await axios.get("http://localhost:3000/api/products");
-  const orderRes = await axios.get("http://localhost:3000/api/orders");
+  const productRes = await axios.get(
+    "https://tonbb.sse.codesandbox.io/api/products"
+  );
+  const orderRes = await axios.get(
+    "https://tonbb.sse.codesandbox.io/api/orders"
+  );
 
   return {
     props: {
