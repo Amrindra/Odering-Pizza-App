@@ -10,7 +10,7 @@ import {
 import axios from "axios";
 import { useRouter } from "next/router";
 import { reset } from "../redux/cartSlice";
-// import OrderDetail from "../components/OrderDetail";
+import OrderDetails from "../components/OrderDetails";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -24,13 +24,17 @@ const Cart = () => {
 
   const createOrder = async (data) => {
     try {
-      const res = await axios.post("http://localhost:3000/api/orders", data);
+      // const res = await axios.post("http://localhost:3000/api/orders", data);
+      const res = await axios.post(
+        " https://tonbb.sse.codesandbox.io/api/orders",
+        data
+      );
       if (res.status === 201) {
         dispatch(reset());
         router.push(`/orders/${res.data._id}`);
       }
-    } catch (err) {
-      console.log(err);
+    } catch (errorr) {
+      console.log(errorr);
     }
   };
 
@@ -193,7 +197,7 @@ const Cart = () => {
           )}
         </div>
       </div>
-      {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
+      {cash && <OrderDetails total={cart.total} createOrder={createOrder} />}
     </div>
   );
 };
