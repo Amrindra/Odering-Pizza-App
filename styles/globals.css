@@ -1,3 +1,8 @@
+:root {
+  --main-color: black;
+  --title-color: #d82148;
+}
+
 html,
 body {
   padding: 0;
@@ -14,3 +19,8 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* hr {
+  color: black;
+  height: 5px;
+} */

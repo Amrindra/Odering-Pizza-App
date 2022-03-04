@@ -6,23 +6,28 @@
   align-items: center;
   padding: 20px 40px;
   cursor: pointer;
+  background-color: var(--main-color);
+  box-shadow: 0 5px 5px black;
+  border-radius: 5px;
 }
 
 .title {
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: bold;
-  color: #d1411e;
+  color: var(--title-color);
+  text-align: center;
 }
 
 .price {
   font-size: 18px;
   font-weight: bold;
-  color: #666;
+  color: white;
 }
 
 .desc {
   text-align: center;
   color: #777;
+  color: white;
 }
 
 @media screen and (max-width: 1024px) {

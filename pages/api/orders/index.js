@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
   if (method === "GET") {
     try {
-      const orders = await Order.find(req.body);
+      const orders = await Order.find();
       res.status(200).json(orders);
     } catch (error) {
       res.status(500).json(error);

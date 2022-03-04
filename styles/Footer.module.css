@@ -1,7 +1,10 @@
 .container {
-  height: calc(100vh - 100px);
+  /* height: calc(80vh - 100px); */
+  /* height: 60vh; */
+  height: auto;
   background-color: #222;
   display: flex;
+  margin-top: 4rem;
 }
 
 .item {
@@ -17,8 +20,12 @@
 }
 
 .card {
-  flex: 1;
-  padding: 0 20px;
+  /* flex: 1; */
+  padding: 0 80px;
+}
+
+.card > .menu {
+  cursor: pointer;
 }
 
 .title {
@@ -30,29 +37,24 @@
   color: lightgray;
 }
 
-.motto {
-  color: rgb(211, 211, 211);
-}
-
 @media screen and (max-width: 1200px) {
   .container {
-    height: 52vh;
+    /* height: 52vh; */
+    height: auto;
+    overflow: hidden;
     text-align: center;
-  }
-
-  .item:first-child {
-    display: none;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 @media screen and (max-width: 480px) {
   .container {
     height: auto;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-  }
-
-  .item:first-child {
-    display: none;
   }
 
   .item {

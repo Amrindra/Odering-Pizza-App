@@ -57,7 +57,7 @@ const Product = ({ pizza }) => {
       <div className={styles.right}>
         <h1 className={styles.title}>{pizza.name}</h1>
         {/* pizza.price[size] meaning that showing price accroding to the size from the price array  */}
-        <span className={styles.price}>${price}</span>
+        <span className={styles.price}>Price: ${price}</span>
         <p className={styles.desc}>{pizza.desc}</p>
         <h3 className={styles.choose}>Choose the size</h3>
 

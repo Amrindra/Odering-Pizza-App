@@ -1,20 +1,27 @@
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.item}>
+      {/* <div className={styles.item}>
         <Image src="/img/bg.png" alt="" layout="fill" objectFit="cover" />
-      </div>
+      </div> */}
 
       <div className={styles.item}>
         <div className={styles.card}>
-          <h2 className={styles.motto}>Lorem ipsum dolor sit amet.</h2>
+          <h2 className={styles.title}>MENU</h2>
+          <p className={`${styles.text} ${styles.menu}`}>Pizza</p>
+          <p className={`${styles.text} ${styles.menu}`}>Calzone</p>
+          <p className={`${styles.text} ${styles.menu}`}>Wings</p>
+          <p className={`${styles.text} ${styles.menu}`}>Sides</p>
+          <p className={`${styles.text} ${styles.menu}`}>Pasta</p>
+          <p className={`${styles.text} ${styles.menu}`}>Drinks</p>
+          <p className={`${styles.text} ${styles.menu}`}>Desserts</p>
         </div>
 
         <div className={styles.card}>
-          <h1 className={styles.title}>FIND OUT RESTURANTS</h1>
+          <h1 className={styles.title}>ABOUT OUR RESTURANTS</h1>
           <p className={styles.text}>
             1000 St. Boston #123 <br /> Boston, 01239 <br /> (999) 999-9999
           </p>
@@ -29,7 +36,7 @@ const Footer = () => {
         <div className={styles.card}>
           <h1 className={styles.title}>WORKING HOURS</h1>
           <p className={styles.text}>
-            SATURDAY - SUNDAY <br /> 24/7
+            MONDAY - SUNDAY <br /> 24/7
           </p>
         </div>
       </div>

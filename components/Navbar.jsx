@@ -30,17 +30,19 @@ const Navbar = () => {
           <Link href="/" passHref>
             <li className={styles.listItem}>Homepage</li>
           </Link>
-          <li className={styles.listItem}>Products</li>
-          <li className={styles.listItem}>Menu</li>
-          <Image
-            src="https://img.icons8.com/external-konkapp-flat-konkapp/64/000000/external-pizza-seafood-konkapp-flat-konkapp.png"
-            alt=""
-            width="32"
-            height="32"
-          />
-          <li className={styles.listItem}>Events</li>
-          <li className={styles.listItem}>Blog</li>
+          <li className={styles.listItem}>Deals</li>
           <li className={styles.listItem}>Contact</li>
+          <li className={`${styles.listItem} ${styles.menu}`}>
+            Menu
+            <ul className={styles.ul_dropbox}>
+              <li className={styles.li_dropbox}>Pizza Section</li>
+              <li className={styles.li_dropbox}>Calzone Section</li>
+              <li className={styles.li_dropbox}>Pasta Section</li>
+              <li className={styles.li_dropbox}>Wings Section</li>
+              <li className={styles.li_dropbox}>Fries Section</li>
+              <li className={styles.li_dropbox}>Drink Section</li>
+            </ul>
+          </li>
         </ul>
       </div>
 

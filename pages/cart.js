@@ -16,11 +16,12 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [open, setOpen] = useState(false);
   const [cash, setCash] = useState(false);
+  const dispatch = useDispatch();
+  const router = useRouter();
+
   const amount = cart.total;
   const currency = "USD";
   const style = { layout: "vertical" };
-  const dispatch = useDispatch();
-  const router = useRouter();
 
   const createOrder = async (data) => {
     try {
@@ -33,8 +34,8 @@ const Cart = () => {
         dispatch(reset());
         router.push(`/orders/${res.data._id}`);
       }
-    } catch (errorr) {
-      console.log(errorr);
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -52,7 +53,7 @@ const Cart = () => {
           currency: currency
         }
       });
-    }, [currency, showSpinner]);
+    }, [currency, showSpinner, options, dispatch]);
 
     return (
       <>

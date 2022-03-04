@@ -1,5 +1,5 @@
 .container {
-  background-color: #d1411e;
+  background-color: #1c0a00;
   height: 100px;
   padding: 0px 50px;
   display: flex;
@@ -57,7 +57,38 @@
 
 .listItem {
   margin: 20px;
-  font-weight: 50;
+  font-weight: 500;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.ul_dropbox {
+  list-style: none;
+  position: absolute;
+  top: 75%;
+  left: 41%;
+  padding: 0 30px;
+  padding-bottom: 1rem;
+  line-height: 50px;
+  background-color: black;
+  display: none;
+}
+
+.listItem:hover > .ul_dropbox:focus {
+  display: list-item;
+  color: #d1411e;
+}
+
+.li_dropbox {
+  text-align: center;
+  position: relative;
+  letter-spacing: 2px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.li_dropbox:hover {
+  background-color: #d1411e;
 }
 
 .cart {
@@ -83,7 +114,7 @@
   color: #d1411e;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1200px) {
   .item:nth-child(2) {
     display: none;
   }
@@ -93,7 +124,7 @@
   }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 480px) {
   .item:nth-child(2) {
     display: none;
   }
