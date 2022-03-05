@@ -1,6 +1,13 @@
-.container {
-  padding: 50px;
+.wrapper {
+  padding: 0 50px;
   display: flex;
+}
+
+.addProductButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 .item {

@@ -31,7 +31,6 @@ const Navbar = () => {
             <li className={styles.listItem}>Homepage</li>
           </Link>
           <li className={styles.listItem}>Deals</li>
-          <li className={styles.listItem}>Contact</li>
           <li className={`${styles.listItem} ${styles.menu}`}>
             Menu
             <ul className={styles.ul_dropbox}>
@@ -43,6 +42,11 @@ const Navbar = () => {
               <li className={styles.li_dropbox}>Drink Section</li>
             </ul>
           </li>
+          <Link href="/admin" passHref>
+            <li className={`${styles.listItem} ${styles.adminOnly}`}>
+              Admin Only
+            </li>
+          </Link>
         </ul>
       </div>
 

@@ -114,6 +114,10 @@
   color: #d1411e;
 }
 
+.adminOnly {
+  color: red;
+}
+
 @media screen and (max-width: 1200px) {
   .item:nth-child(2) {
     display: none;

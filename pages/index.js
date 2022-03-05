@@ -7,10 +7,10 @@ import axios from "axios";
 import { useState } from "react";
 
 import Add from "../components/Add";
-import AddButton from "../components/AddButton";
+// import AddButton from "../components/AddButton";
 
 export default function Home({ productList, admin }) {
-  const [close, setClose] = useState(true);
+  // const [close, setClose] = useState(true);
 
   return (
     <div className={styles.container}>
@@ -22,11 +22,11 @@ export default function Home({ productList, admin }) {
 
       <Slider />
 
-      {<AddButton setClose={setClose} />}
+      {/* {<AddButton setClose={setClose} />} */}
 
       {/* passing productList data from database as a prop to the component  */}
       <PizzaList productList={productList} />
-      {!close && <Add setClose={setClose} />}
+      {/* {!close && <Add setClose={setClose} />} */}
     </div>
   );
 }
