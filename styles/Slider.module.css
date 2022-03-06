@@ -1,6 +1,7 @@
 .container {
   height: calc(100vh - 100px);
   /* background-color: #d1411e; */
+  margin-top: 2rem;
   overflow: hidden;
   position: relative;
 }
@@ -8,7 +9,7 @@
 .arrowContainer {
   position: absolute;
   width: 15%;
-  height: 5%;
+  height: 10%;
   top: 0;
   bottom: 0;
   margin: auto;

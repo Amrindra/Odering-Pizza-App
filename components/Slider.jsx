@@ -28,9 +28,9 @@ const Slider = () => {
         <Image
           src="https://img.icons8.com/ios-glyphs/100/000000/chevron-left.png"
           alt=""
-          // layout="fill"
-          width="60px"
-          height="60px"
+          layout="fill"
+          // width="60px"
+          // height="60px"
           objectFit="contain"
         />
       </div>
@@ -41,13 +41,11 @@ const Slider = () => {
       >
         <div className={styles.imgContainer}>
           <Image
-            src="/img/Pizza1.png"
+            src="/img/veggie.webp"
             alt=""
             layout="fill"
             objectFit="contain"
             priority
-            // width="1000px"
-            // height="1000px"
           />
         </div>
 
@@ -83,9 +81,11 @@ const Slider = () => {
         <Image
           src="https://img.icons8.com/ios-glyphs/100/000000/chevron-right.png"
           alt=""
-          // layout="fill"
-          width="60px"
-          height="60px"
+          layout="fill"
+          objectFit="contain"
+
+          // width="60px"
+          // height="60px"
         />
       </div>
     </div>

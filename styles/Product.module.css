@@ -13,12 +13,18 @@
 
 .right {
   flex: 1;
+  margin-top: 2rem;
+}
+
+.desc {
+  width: 50%;
 }
 
 .imageContainer {
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
   position: relative;
+  margin-bottom: 7rem;
 }
 
 .price {
@@ -103,6 +109,7 @@
   .imageContainer {
     height: 40vw;
     width: 40vw;
+    margin-bottom: 0;
   }
 
   .right {
@@ -133,6 +140,10 @@
     height: 40px;
     padding: 10px 20px;
     font-size: 1.1rem;
+  }
+
+  .desc {
+    width: 100%;
   }
 }
 

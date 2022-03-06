@@ -4,9 +4,9 @@ import Slider from "../components/Slider";
 import styles from "../styles/Home.module.css";
 import PizzaList from "../components/PizzaList";
 import axios from "axios";
-import { useState } from "react";
+// import { useState } from "react";
 
-import Add from "../components/Add";
+// import Add from "../components/Add";
 // import AddButton from "../components/AddButton";
 
 export default function Home({ productList, admin }) {

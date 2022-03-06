@@ -96,6 +96,20 @@ const Cart = () => {
     );
   };
 
+  // Create our number formatter for the currency
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD"
+
+    // These options are needed to round to whole numbers if that's what you want.
+    //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+    //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+  });
+
+  const handleRemove = () => {
+    dispatch(reset());
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -111,7 +125,7 @@ const Cart = () => {
             </tr>
           </tbody>
 
-          <tbody>
+          <tbody className={styles.orderItemDetail}>
             {cart.products.map((product) => (
               <tr className={styles.tr} key={product._id}>
                 <td>
@@ -138,7 +152,9 @@ const Cart = () => {
                 </td>
 
                 <td>
-                  <span className={styles.price}>${product.price}</span>
+                  <span className={styles.price}>
+                    {formatter.format(product.price)}
+                  </span>
                 </td>
 
                 <td>
@@ -147,19 +163,26 @@ const Cart = () => {
 
                 <td>
                   <span className={styles.total}>
-                    ${product.price * product.quantity}
+                    {formatter.format(product.price * product.quantity)}
                   </span>
+                </td>
+
+                <td>
+                  <button onClick={handleRemove}>Remove</button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+
+      {/* Subtotal and Paypal section */}
       <div className={styles.right}>
         <div className={styles.wrapper}>
           <h2 className={styles.title}>CART TOTAL</h2>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Subtotal:</b>${cart.total}
+            <b className={styles.totalTextTitle}>Subtotal:</b>
+            {formatter.format(cart.total)}
           </div>
 
           <div className={styles.totalText}>
@@ -167,7 +190,8 @@ const Cart = () => {
           </div>
 
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Total:</b>${cart.total}
+            <b className={styles.totalTextTitle}>Total:</b>
+            {formatter.format(cart.total)}
           </div>
 
           {open ? (

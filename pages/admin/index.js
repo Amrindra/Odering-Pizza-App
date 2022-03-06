@@ -12,11 +12,14 @@ const Admin = ({ orders, products }) => {
 
   const status = ["preparing", "on the way", "delivered"];
 
+  const handleUpdate = () => {
+    console.log("Checked");
+  };
+
   const handleDelete = async (id) => {
-    console.log(id);
     try {
       const res = await axios.delete(
-        "https://tonbb.sse.codesandbox.io/api/products" + id
+        "https://tonbb.sse.codesandbox.io/api/products/" + id
       );
       setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
     } catch (err) {
@@ -31,7 +34,7 @@ const Admin = ({ orders, products }) => {
 
     try {
       const res = await axios.put(
-        "https://tonbb.sse.codesandbox.io/api/orders" + id,
+        "https://tonbb.sse.codesandbox.io/api/orders/" + id,
         {
           status: currentStatus + 1
         }
@@ -86,7 +89,12 @@ const Admin = ({ orders, products }) => {
                   <td>${product.prices[0]}</td>
 
                   <td>
-                    <button className={styles.button}>Edit</button>
+                    <button
+                      className={styles.button}
+                      onClick={handleUpdate(product._id)}
+                    >
+                      Edit
+                    </button>
                     <button
                       className={styles.button}
                       onClick={() => handleDelete(product._id)}

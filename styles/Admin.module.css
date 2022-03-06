@@ -35,3 +35,21 @@
 .button:last-child {
   background-color: crimson;
 }
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .wrapper {
+    overflow: hidden;
+    padding: 20px;
+  }
+  .table {
+    border-spacing: 7px;
+  }
+}

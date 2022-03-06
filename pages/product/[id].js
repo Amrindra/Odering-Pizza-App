@@ -46,6 +46,16 @@ const Product = ({ pizza }) => {
     dispatch(addProduct({ ...pizza, extraOption, price, quantity }));
   };
 
+  // Create our number formatter for the currency
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD"
+
+    // These options are needed to round to whole numbers if that's what you want.
+    //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+    //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+  });
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -55,9 +65,9 @@ const Product = ({ pizza }) => {
       </div>
 
       <div className={styles.right}>
-        <h1 className={styles.title}>{pizza.name}</h1>
+        <h1 className={styles.title}>{pizza.title}</h1>
         {/* pizza.price[size] meaning that showing price accroding to the size from the price array  */}
-        <span className={styles.price}>Price: ${price}</span>
+        <span className={styles.price}>Price: {formatter.format(price)}</span>
         <p className={styles.desc}>{pizza.desc}</p>
         <h3 className={styles.choose}>Choose the size</h3>
 

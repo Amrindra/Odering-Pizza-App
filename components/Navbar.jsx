@@ -11,17 +11,19 @@ const Navbar = () => {
     <div className={styles.container}>
       <div className={styles.item}>
         <div className={styles.callButton}>
-          <Image
-            src="https://img.icons8.com/ios-filled/100/000000/phone.png"
-            alt=""
-            width="32"
-            height="32"
-          />
+          <a href="tel:123456789">
+            <Image
+              src="https://img.icons8.com/ios-filled/100/000000/phone.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+          </a>
         </div>
 
         <div className={styles.nav_texts}>
-          <div className={styles.nav_text}>ORDER NOW</div>
-          <div className={styles.nav_text}>999 999 999</div>
+          {/* <div className={styles.nav_text}>ORDER NOW</div> */}
+          {/* <div className={styles.nav_text}>999 999 999</div> */}
         </div>
       </div>
 
@@ -31,23 +33,21 @@ const Navbar = () => {
             <li className={styles.listItem}>Homepage</li>
           </Link>
           <li className={styles.listItem}>Deals</li>
-          <li className={`${styles.listItem} ${styles.menu}`}>
-            Menu
-            <ul className={styles.ul_dropbox}>
-              <li className={styles.li_dropbox}>Pizza Section</li>
-              <li className={styles.li_dropbox}>Calzone Section</li>
-              <li className={styles.li_dropbox}>Pasta Section</li>
-              <li className={styles.li_dropbox}>Wings Section</li>
-              <li className={styles.li_dropbox}>Fries Section</li>
-              <li className={styles.li_dropbox}>Drink Section</li>
-            </ul>
-          </li>
+          <Link href="/menu">
+            <li className={`${styles.listItem} ${styles.menu}`}>Menu</li>
+          </Link>
           <Link href="/admin" passHref>
             <li className={`${styles.listItem} ${styles.adminOnly}`}>
               Admin Only
             </li>
           </Link>
         </ul>
+      </div>
+
+      <div className={styles.toggleIcon}>
+        <Link href="/" passHref>
+          <h3>HOME</h3>
+        </Link>
       </div>
 
       <Link href="/cart" passHref>

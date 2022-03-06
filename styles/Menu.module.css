@@ -1,0 +1,23 @@
+.container {
+  height: calc(100vh - 100px);
+  /* text-align: center; */
+}
+
+.menuBody {
+  display: flex;
+  flex-direction: space-between;
+}
+
+.menuTitles,
+.menuPrices {
+  list-style: none;
+  line-height: 4rem;
+}
+
+.menuTitles {
+  flex: 1;
+}
+
+.menuPrices {
+  flex: 1;
+}
