@@ -1,4 +1,4 @@
-# Pizza App built with Next.jS, MongoDB/Express
+# Pizza App built with Next.jS, MongoDB/Mongoose
 
 Pizza app Homage. Click on your favorite pizza and choose size and additional ingredients and then click on add to cart button.
 
