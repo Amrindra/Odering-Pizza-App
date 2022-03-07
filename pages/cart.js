@@ -27,7 +27,7 @@ const Cart = () => {
     try {
       // const res = await axios.post("http://localhost:3000/api/orders", data);
       const res = await axios.post(
-        " https://tonbb.sse.codesandbox.io/api/orders",
+        "https://tonbb.sse.codesandbox.io/api/orders",
         data
       );
       if (res.status === 201) {
@@ -53,7 +53,7 @@ const Cart = () => {
           currency: currency
         }
       });
-    }, [currency, showSpinner, options, dispatch]);
+    }, [currency, showSpinner]);
 
     return (
       <>

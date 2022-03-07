@@ -1,5 +1,5 @@
-import Order from "../../../models/Order";
 import dbConnect from "../../../util/mongoose";
+import Order from "../../../models/Order";
 
 //we use async function because it's the CRUD operation and we don't know how long will it take for processing
 export default async function handler(req, res) {
@@ -29,7 +29,5 @@ export default async function handler(req, res) {
     } catch (error) {
       res.status(500).json(error);
     }
-  }
-  if (method === "DELETE") {
   }
 }

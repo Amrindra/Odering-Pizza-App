@@ -26,9 +26,9 @@ export default async function handler(req, res) {
   }
 
   if (method === "PUT") {
-    if (!token || token !== process.env.token) {
-      return res.status(401).json("Not authorized!");
-    }
+    // if (!token || token !== process.env.token) {
+    //   return res.status(401).json("Not authorized!");
+    // }
 
     try {
       const product = await Product.findByIdAndUpdate(id, req.body, {

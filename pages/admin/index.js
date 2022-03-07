@@ -52,6 +52,7 @@ const Admin = ({ orders, products }) => {
 
   return (
     <div className={styles.container}>
+      <h1 className={styles.adminDashboard}>ADMIN DASHBOARD</h1>
       <div className={styles.addProductButton}>
         {<AddButton setClose={setClose} />}
         {!close && <Add setClose={setClose} />}

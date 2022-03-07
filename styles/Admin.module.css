@@ -3,6 +3,12 @@
   display: flex;
 }
 
+.adminDashboard {
+  display: flex;
+  justify-content: center;
+  color: teal;
+  text-decoration: underline;
+}
 .addProductButton {
   display: flex;
   justify-content: center;

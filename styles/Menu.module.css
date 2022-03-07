@@ -1,17 +1,28 @@
 .container {
-  height: calc(100vh - 100px);
-  /* text-align: center; */
+  /* height: calc(100vh - 100px); */
+}
+
+.title {
+  text-align: center;
+  color: red;
+  margin-bottom: 0;
 }
 
 .menuBody {
   display: flex;
-  flex-direction: space-between;
+  /* justify-content: center; */
 }
 
 .menuTitles,
 .menuPrices {
   list-style: none;
   line-height: 4rem;
+  font-size: 2rem;
+}
+
+.item {
+  text-align: center;
+  cursor: pointer;
 }
 
 .menuTitles {
@@ -20,4 +31,28 @@
 
 .menuPrices {
   flex: 1;
+}
+
+@media screen and (max-width: 680px) {
+  .menuBody {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menuTitles,
+  .menuPrices {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menuBody {
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
 }
