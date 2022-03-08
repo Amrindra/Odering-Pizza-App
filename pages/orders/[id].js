@@ -133,7 +133,7 @@ const Order = ({ order }) => {
 //fetching only single product by specifying the params which is the _id of the product
 export const getServerSideProps = async ({ params }) => {
   const response = await axios.get(
-    `https://tonbb.sse.codesandbox.io/api/products/${params.id}`
+    `https://tonbb.sse.codesandbox.io/api/orders/${params.id}`
   );
   return {
     props: {
