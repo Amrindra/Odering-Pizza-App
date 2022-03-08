@@ -2,7 +2,7 @@
   /* height: calc(70vh - 100px); */
   /* height: 60vh; */
   height: auto;
-  background-color: #222;
+  background-color: var(--main-color);
 }
 
 .wrapper {

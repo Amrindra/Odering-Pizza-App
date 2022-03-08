@@ -1,5 +1,5 @@
 .container {
-  background-color: #1c0a00;
+  background-color: var(--main-color);
   height: 100px;
   padding: 0px 50px;
   display: flex;
@@ -17,11 +17,14 @@
 }
 
 .item:nth-child(2) {
-  flex: 3;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 .item:last-child {
   justify-content: flex-end;
+  padding-left: 0;
 }
 
 .callButton {
