@@ -15,7 +15,7 @@ export default function Home({ productList, admin }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Pizza Shop in Boston</title>
+        <title>Pizza Shop</title>
         <meta name="description" content="Best Pizza In Town" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
