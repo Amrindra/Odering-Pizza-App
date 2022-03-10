@@ -1,6 +1,7 @@
 # Pizza App built with Next.jS, MongoDB/Mongoose, and Redux
 
 Pizza app Homage. Click on your favorite pizza and choose size and additional ingredients and then click on add to cart button.
+Link to the demo website: https://online-pizza-app.vercel.app/
 
 ![Homepage](https://user-images.githubusercontent.com/70451928/157096037-ea90f7a4-aeef-483b-908e-418f4823b5fb.png)
 # Order Detail
