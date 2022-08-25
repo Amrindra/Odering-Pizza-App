@@ -40,7 +40,7 @@ export const getServerSideProps = async (ctx) => {
   }
 
   const response = await axios.get(
-    "http://localhost:8000/api/products"
+    "http://localhost:3000/api/products"
   );
   return {
     props: {
