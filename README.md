@@ -14,7 +14,8 @@ You can pay with cash or Paypal. If you want to test it out you have to create a
 
 
 ![Cartandcheckout](https://user-images.githubusercontent.com/70451928/157096154-494563b1-96d0-4298-b62c-40bceebdeb82.png)
-# Login as an admin 
+# Login as an admin ![pizza-app](https://user-images.githubusercontent.com/70451928/233807834-a744aa73-d61c-4f4e-ad7e-ac8b39952e2a.png)
+
 You can login as an admin to see orders and products. 
 Username: admin
 Password: 123456
